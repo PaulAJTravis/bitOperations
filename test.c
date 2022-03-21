@@ -11,7 +11,9 @@ unsigned int getBit(int bit_string, int bit_num) {
   unsigned int res = bit_string >>(bit_num-1);
 
   //Preforms a bitwise AND operation against the binary string 1UL. This will eliminate any leftover bits after the shift operation above.
-  res = res & 0b00000001;
+  //res = res & 0b00000001;
+  
+  res &= 1UL;
 
   return res;
 
